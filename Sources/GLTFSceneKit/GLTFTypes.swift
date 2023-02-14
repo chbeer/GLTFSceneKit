@@ -8,6 +8,43 @@
 
 import SceneKit
 
+#if targetEnvironment(macCatalyst)
+/* BeginMode */
+let GL_POINTS =                 0x0000
+let GL_LINES =                  0x0001
+let GL_LINE_LOOP =              0x0002
+let GL_LINE_STRIP =             0x0003
+let GL_TRIANGLES =              0x0004
+let GL_TRIANGLE_STRIP =         0x0005
+let GL_TRIANGLE_FAN =           0x0006
+/* DataType */
+let GL_BYTE =                   0x1400
+let GL_UNSIGNED_BYTE =          0x1401
+let GL_SHORT =                  0x1402
+let GL_UNSIGNED_SHORT =         0x1403
+let GL_INT =                    0x1404
+let GL_UNSIGNED_INT =           0x1405
+let GL_FLOAT =                  0x1406
+let GL_FIXED =                  0x140C
+/* Buffer Objects */
+let GL_ARRAY_BUFFER =           0x8892
+let GL_ELEMENT_ARRAY_BUFFER =   0x8893
+/* TextureMagFilter */
+let GL_NEAREST =                0x2600
+let GL_LINEAR =                0x2601
+/* TextureMinFilter */
+/*      GL_NEAREST */
+/*      GL_LINEAR */
+let GL_NEAREST_MIPMAP_NEAREST =  0x2700
+let GL_LINEAR_MIPMAP_NEAREST =   0x2701
+let GL_NEAREST_MIPMAP_LINEAR =   0x2702
+let GL_LINEAR_MIPMAP_LINEAR =    0x2703
+/* TextureWrapMode */
+let GL_REPEAT =                  0x2901
+let GL_CLAMP_TO_EDGE =           0x812F
+let GL_MIRRORED_REPEAT =         0x8370
+#endif
+
 let attributeMap: [String: SCNGeometrySource.Semantic] = [
     "POSITION": SCNGeometrySource.Semantic.vertex,
     "NORMAL": SCNGeometrySource.Semantic.normal,
